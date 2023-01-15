@@ -1,0 +1,44 @@
+// для текста 
+$text-color-one: rgba(242, 238, 233, 1);
+$text-color-two: rgba(18, 17, 17, 1);
+$text-color-three: rgba(118, 122, 126, 1);
+
+// для фона
+$back-color-one: rgba(242, 238, 233, 1);
+$back-color-two: rgba(18, 17, 17, 1);
+$back-color-three: rgba(118, 122, 126, 1);
+$back-color-four: rgba(69, 217, 217, 1);
+
+// для граница 
+$border-color-one: rgba(242, 238, 233, 1);
+$border-color-two: rgba(18, 17, 17, 1);
+$border-color-three: rgba(118, 122, 126, 1);
+
+// для теней
+$shadow-color-one: rgba(242, 238, 233, 0.8);
+$shadow-color-two: rgba(18, 17, 17, 0.8);
+$shadow-color-three: rgba(118, 122, 126, 0.8);
+
+// для кнопок
+$btn-color-one: rgba(242, 238, 233, 1);
+$btn-color-two: rgba(18, 17, 17, 1);
+$btn-color-three: rgba(118, 122, 126, 1);
+$btn-color-four: rgba(69, 217, 217, 1);
+
+
+@mixin flex-box($jc:space-between, $ai:start, $fd:row, $gap:0, $fw: nowrap){
+  display: flex;
+  justify-content: $jc;
+  align-items: $ai;
+  flex-direction: $fd;
+  gap: $gap;
+  flex-wrap: $fw;
+}
+
+@mixin font-style($fw:400, $fsize:16px, $lh:100%, $fstyle: normal){
+  font-family: 'Inter';
+  font-style: $fstyle;
+  font-weight: $fw;
+  font-size: $fsize;
+  line-height: $lh;
+}
