@@ -12,29 +12,9 @@ body{
   padding-top: 97px;
 }
 
+// стили для обертки
+@import './detailStyles/wrapper';
+
 // стили компонентов
 @import './detailStyles/commponentsStyle.scss';
 
-.homePage{
-  width: auto;
-  height: auto;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  font-size: 40px;
-  color: $text-color-one;
-  padding: 20px 100px;
-  margin: 0 50px;
-  .grid{
-    width: 500px;
-    height: 400px;
-    display: flex;
-    flex-wrap: wrap;
-    li{
-      width: 30px;
-      height: 30px;
-      background-color: azure;
-    }
-  }
-}

@@ -3,9 +3,11 @@ import SignInAndLogIn from "../components/signInAndLogIn/SignInAndLogIn";
 
 const HomePage = () => {
   return(
-      <main>
+      <main className="wrapper">
         {AboutUsBord}
-        <SignInAndLogIn/>
+        <div className="m0auto">
+          <SignInAndLogIn/>
+        </div>
       </main>
   )
 };
