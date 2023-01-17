@@ -1,0 +1,16 @@
+@mixin flex-box($jc:space-between, $ai:start, $fd:row, $gap:0, $fw: nowrap){
+  display: flex;
+  justify-content: $jc;
+  align-items: $ai;
+  flex-direction: $fd;
+  gap: $gap;
+  flex-wrap: $fw;
+}
+
+@mixin font-style($fw:400, $fsize:16px, $lh:100%, $fstyle: normal){
+  font-family: 'Inter';
+  font-style: $fstyle;
+  font-weight: $fw;
+  font-size: $fsize;
+  line-height: $lh;
+}

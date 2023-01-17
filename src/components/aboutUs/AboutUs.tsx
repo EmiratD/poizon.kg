@@ -10,6 +10,6 @@ const textInfo: string =
 
 const AboutUsBord = (
   <BordInfo title={logo} text={textInfo} btn="о нас" img={clothing} />
-);
+); 
 
 export default AboutUsBord;

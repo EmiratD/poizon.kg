@@ -2,19 +2,22 @@
   max-width: 1440px;
   margin: 50px auto;
   padding: 0 50px;
-  display: flex;
-  flex-direction: column;
-  gap: 70px;
+  @include flex-box(start, start, column, 70px)
 }
 
 .m0auto{
   margin: 0 auto;
 }
 
-// .bord{
-//   max-width: 1100px;
-//   height: auto;
-//   @include flex-box(center, start, row, 30px, wrap);
-//   padding: 10px;
-//   margin: 20px auto;
-// }
+.bord{
+  max-width: 90%;
+  height: auto;
+  @include flex-box(center, start, row, 30px, wrap);
+  padding: 10px;
+  margin: 20px auto;
+}
+.swiper-slide {
+  display: flex;
+  align-items: start;
+  justify-content: center;
+}

@@ -1,4 +1,4 @@
-// стили шрифт
+// стили шрифта
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap'); 
 
 // обнуление стилей
@@ -6,6 +6,8 @@
 
 // переменые цветов
 @import './detailStyles/var.scss';
+// миксины цветов
+@import './detailStyles/mixins.scss';
 
 body{
   background: rgba(242, 238, 233, 1);

@@ -1,32 +1,39 @@
 import Stages from "./stage/Stage";
-import {WorkflowSvg,  CheckSvg, BoxSvg, DeliverySvg, SearchSvg, EditSvg, TruckSvg} from "../../assets/svg/workflowSvg";
+import {
+  WorkflowSvg,
+  CheckSvg,
+  BoxSvg,
+  DeliverySvg,
+  SearchSvg,
+  EditSvg,
+  TruckSvg,
+} from "../../assets/svg/workflowSvg";
 
 const Workflow = () => {
-
   const stagesArr = [
     {
-      text:'РАЗМЕЩЕНИЕ ЗАКАЗА',
-      svg: EditSvg,
+      text: "РАЗМЕЩЕНИЕ ЗАКАЗА",
+      Svg: EditSvg,
     },
     {
-      text:'ДОСТАВКА НА СКЛАД POIZON',
-      svg: TruckSvg,
+      text: "ДОСТАВКА НА СКЛАД POIZON",
+      Svg: TruckSvg,
     },
     {
-      text:'ПРЕДВАРИТЕЛЬНАЯ ПРОВЕРКА',
-      svg: SearchSvg,
+      text: "ПРЕДВАРИТЕЛЬНАЯ ПРОВЕРКА",
+      Svg: SearchSvg,
     },
     {
-      text:'ПОДТВЕРЖДЕНИЕ НА ПОДЛИННОСТЬ',
-      svg: CheckSvg,
+      text: "ПОДТВЕРЖДЕНИЕ НА ПОДЛИННОСТЬ",
+      Svg: CheckSvg,
     },
     {
-      text:'ФИРМЕННАЯ УПАКОВКА',
-      svg: BoxSvg,
+      text: "ФИРМЕННАЯ УПАКОВКА",
+      Svg: BoxSvg,
     },
     {
-      text:'ОТПРАВКА КЛИЕНТУ',
-      svg: DeliverySvg,
+      text: "ОТПРАВКА КЛИЕНТУ",
+      Svg: DeliverySvg,
     },
   ];
 
@@ -35,10 +42,12 @@ const Workflow = () => {
       <h2 className="workflow-title">БИЗНЕС ПРОЦЕСС POIZON</h2>
       <div className="workflow-container">
         <div className="workflow-container__info">
-          {stagesArr.map(data => <Stages text={data.text} svg={data.svg}/>)}
+          {stagesArr.map((data) => (
+            <Stages key={data.text} text={data.text} Svg={data.Svg} />
+          ))}
         </div>
         <div className="workflow-container__img">
-          <WorkflowSvg/>
+          <WorkflowSvg />
         </div>
       </div>
     </section>

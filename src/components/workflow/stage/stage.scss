@@ -1,29 +1,33 @@
-.stages{
+.stages {
   max-width: 700px;
   height: auto;
   @include flex-box(start, center, row, 30px);
-  &-ellipse{
+
+  &-ellipse {
     width: 60px;
   }
-  &-text{
+
+  &-text {
     max-width: 355px;
     height: auto;
     @include font-style(400, 24px);
     color: $text-color-two;
   }
-  &-svg{
+
+  &-svg {
     width: 80px;
     height: 80px;
     border: 4px solid $border-color-two;
     @include flex-box(center, center);
-    & svg{
+
+    & svg {
       width: 80%;
       height: 80%;
     }
-    .deliverySvg{
+
+    .deliverySvg {
       width: 100%;
       height: 100%;
     }
   }
 }
-

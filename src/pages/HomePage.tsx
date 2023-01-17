@@ -2,6 +2,7 @@ import AboutUsBord from "../components/aboutUs/AboutUs";
 import SignInAndLogIn from "../components/signInAndLogIn/SignInAndLogIn";
 import HomePageCatalogIBord from "../components/homePageCatalogIBord/HomePageCatalogIBord";
 import Workflow from "../components/workflow/Workflow";
+import SliderLogo from "../components/sliderLogo/SliderLogo";
 
 
 const HomePage = () => {
@@ -14,6 +15,9 @@ const HomePage = () => {
         <SignInAndLogIn />
       </div>
       <HomePageCatalogIBord/>
+      <div className="bord">
+        <SliderLogo/>
+      </div>
       <Workflow/>
     </main>
   );
