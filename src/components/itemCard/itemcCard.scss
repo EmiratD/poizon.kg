@@ -1,70 +1,79 @@
-.itemCard{
+.itemCard {
   width: 180px;
   height: 310px;
   position: relative;
   @include flex-box(start, start, column, 20px);
   background: $back-color-card;
   border: 1px solid $border-color-two;
-  box-shadow: inset 0px -1px 4px rgba(0, 0, 0, 0.25);
   border-radius: 5px;
   transition: 0.3s;
-  &:hover{
+
+  &:hover {
     transform: scale(1.01);
+    box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.5);
   }
-  &-img{
-    width: 176px;
-    height: 196px;
+
+  &-img {
+    width: 178px;
+    height: 198px;
     overflow: hidden;
     border-radius: 6px;
-    img{
+    img {
       width: 100%;
       height: 100%;
     }
   }
 
-  &-info{
+  &-info {
     width: 160px;
     height: 90px;
-    padding:10px;
-    &__name{
+    padding: 10px;
+
+    &__name {
       margin-bottom: 15px;
-      @include font-style(400, 14px)
+      @include font-style(400, 14px);
     }
-    &__price{
-      @include font-style(400, 20px)
-      .dollar{
-        @include font-style(400, 14px)
+
+    &__price {
+      @include font-style(400, 20px);
+
+      .dollar {
+        @include font-style(400, 14px);
       }
     }
   }
 
-  &-heart{
+  &-heart {
     position: absolute;
     top: 15px;
     right: 15px;
     transition: 0.3s;
-    &:hover{
+
+    &:hover {
       transform: scale(1.1);
     }
   }
-  &-basket{
+
+  &-basket {
     position: absolute;
     bottom: 15px;
     right: 15px;
     transition: 0.3s;
-    &:hover{
+
+    &:hover {
       transform: scale(1.1);
     }
   }
 }
 
-.heard{
-  &:hover{
-    fill:rgb(221, 164, 31);
+.heard {
+  &:hover {
+    fill: rgb(221, 164, 31);
   }
 }
-.basket{
-  &:hover{
-    fill:rgb(66, 76, 165);
+
+.basket {
+  &:hover {
+    fill: rgb(66, 76, 165);
   }
 }

@@ -1,39 +1,52 @@
-.footer{
+.footer {
   width: 100vw;
   height: auto;
   background: $back-color-two;
   padding: 30px 100px;
-  &-nav{
+
+  &-nav {
     width: 100%;
     height: auto;
     margin: 0 auto;
     @include flex-box(space-between, start, row, 30px, wrap);
     padding: 0 0 35px;
     border-bottom: 2px solid $border-color-one;
-    .conteiner{
+
+    .conteiner {
       @include flex-box(start, start, row, 30px, wrap);
     }
-    &__section{
+
+    &__section {
       @include flex-box(start, start, column, 20px);
-      &-title{
+
+      &-title {
         color: $text-color-one;
         @include font-style(400, 22px);
       }
-      &-ul{
+
+      &-ul {
         margin-left: 15px;
         display: flex;
         flex-direction: column;
         gap: 15px;
-        &-li{
+
+        &-li {
           @include flex-box(start, center, row, 10px, wrap);
           @include font-style(400, 16px);
           color: $text-color-one;
           cursor: pointer;
           transition: 0.3s;
-          &:hover{
+
+          &:hover {
             transform: scale(1.05);
-            }
-          span{
+          }
+
+          & svg {
+            width: 16px;
+            height: 16px;
+          }
+
+          & span {
             color: $text-color-one;
             font-size: 16px;
             height: auto;

@@ -1,22 +1,26 @@
-.signInAndLogIn-btns{
+.signInAndLogIn-btns {
   @include flex-box(start, start, row, 20px);
-  &-btn{
+
+  &-btn {
     padding: 5px 10px;
     @include font-style(400, 16px);
     color: $text-color-one;
     cursor: pointer;
     transition: 0.3s;
-    &:hover{
+
+    &:hover {
       transform: scale(1.05);
       box-shadow: 0px 1px 10px 0px $shadow-color-one;
     }
   }
-  .log-in{
+
+  .log-in {
     border: 1px solid $border-color-one;
     background: $back-color-two;
     color: $text-color-one;
   }
-  .sign-up{
+
+  .sign-up {
     border: 1px solid $border-color-two;
     background: $back-color-one;
     color: $text-color-two;

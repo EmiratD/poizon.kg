@@ -11,10 +11,10 @@
   margin: 0 auto;
 }
 
-.bord{
-  max-width: 900px;
-  height: auto;
-  @include flex-box(space-between, start, row, 20px, wrap);
-  padding: 10px;
-  margin: 20px auto;
-}
+// .bord{
+//   max-width: 1100px;
+//   height: auto;
+//   @include flex-box(center, start, row, 30px, wrap);
+//   padding: 10px;
+//   margin: 20px auto;
+// }

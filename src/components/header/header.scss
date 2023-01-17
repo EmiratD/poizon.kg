@@ -1,4 +1,4 @@
-.header{
+.header {
   width: 100vw;
   height: 55px;
   position: fixed;
@@ -6,37 +6,43 @@
   left: 0;
   z-index: 99;
   @include flex-box(start, center);
-  background:  $back-color-two;
+  background: $back-color-two;
   box-shadow: 0px 4px 20px 0px $shadow-color-one;
 
-  &-text{
+  &-text {
     @include font-style(400, 16px);
     color: $text-color-one;
     cursor: pointer;
     transition: 0.3s;
-    &:hover{
+
+    &:hover {
       transform: scale(1.05);
     }
   }
-  &-nav{
+
+  &-nav {
     width: 100%;
     height: 40px;
     @include flex-box(space-between, center, row, 30px);
     padding: 0px 5%;
-    &__logo{
+
+    &__logo {
       min-width: 150px;
       height: 25px;
       cursor: pointer;
       transition: 0.3s;
-      svg{
+
+      svg {
         width: 100%;
         height: 100%;
       }
-      &:hover{
+
+      &:hover {
         transform: scale(1.05);
       }
     }
-    &__pages{
+
+    &__pages {
       @include flex-box(space-between, start, row, 30px);
     }
   }

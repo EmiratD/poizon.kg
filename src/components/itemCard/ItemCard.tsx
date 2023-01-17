@@ -1,12 +1,12 @@
-import {Basket, Heart} from '../../assets/svg/ItemCardSvg';
+import { Basket, Heart } from "../../assets/svg/ItemCardSvg";
 
-interface ItemInfo{
+interface ItemInfo {
   name: string;
   price: number;
   imge: string;
 }
 
-const ItemCard: ({}:ItemInfo) => JSX.Element  = ({ name, price, imge }) => {
+const ItemCard: ({}: ItemInfo) => JSX.Element = ({ name, price, imge }) => {
   return (
     <div className="itemCard">
       <div className="itemCard-img">
@@ -14,13 +14,16 @@ const ItemCard: ({}:ItemInfo) => JSX.Element  = ({ name, price, imge }) => {
       </div>
       <div className="itemCard-info">
         <p className="itemCard-info__name">{name}</p>
-        <p className="itemCard-info__price">{price}<span className='dollar'>$</span></p>
+        <p className="itemCard-info__price">
+          {price}
+          <span className="dollar">$</span>
+        </p>
       </div>
       <div className="itemCard-heart">
-        <Heart/>
+        <Heart />
       </div>
       <div className="itemCard-basket">
-        <Basket/>
+        <Basket />
       </div>
     </div>
   );
