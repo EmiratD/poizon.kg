@@ -1,13 +1,16 @@
-.swiper {
+.slider-logo-bord{
+  max-width: 90%;
+  height: auto;
+  @include flex-box(center, start, row, 30px, wrap);
+  padding: 10px;
+  margin: 20px auto;
+}
+
+.swiper-logo {
   padding: 20px 10px;
 }
-.swiper-slide {
+.swiper-logo__slide {
   display: flex;
   justify-content: center;
   align-items: center;
-  transition: 0.3s;
-  cursor: pointer;
-  &:hover {
-    transform: scale(1.1);
-  }
 }

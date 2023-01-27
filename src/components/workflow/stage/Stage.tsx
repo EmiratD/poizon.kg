@@ -22,7 +22,7 @@ const Stages = ({ text, Svg }: Istage) => {
             height="28"
             rx="14"
             stroke="black"
-            stroke-width="2"
+            strokeWidth="2"
           />
         </svg>
       </div>

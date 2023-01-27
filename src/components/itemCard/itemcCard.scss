@@ -30,14 +30,21 @@
     padding: 10px;
 
     &__name {
+      max-width: 120px;
+      overflow: hidden;
       margin-bottom: 15px;
-      @include font-style(400, 14px);
+      @include font-style(400, 16px);
+      text-overflow: ellipsis;
     }
 
     &__price {
+      max-width: 100px;
       @include font-style(400, 20px);
+      overflow: hidden;
+      text-overflow: ellipsis;
 
       .dollar {
+        text-overflow: ellipsis;
         @include font-style(400, 14px);
       }
     }
@@ -75,5 +82,5 @@
 .basket {
   &:hover {
     fill: rgb(66, 76, 165);
-  }
+    }
 }

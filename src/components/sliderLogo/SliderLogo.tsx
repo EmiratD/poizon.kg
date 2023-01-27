@@ -13,8 +13,9 @@ import "swiper/css/navigation";
 
 const SliderLogo = () => {
   return (
-    <>
+    <div className="slider-logo-bord">
       <Swiper
+        className="swiper-logo"
         slidesPerView={6}
         spaceBetween={10}
         loop={true}
@@ -24,11 +25,11 @@ const SliderLogo = () => {
         }}
         modules={[Autoplay]}
       >
-        {logo.map((logoBrand) => (
-          <SwiperSlide>{logoBrand}</SwiperSlide>
+        {logo.map((logoBrand, index) => (
+          <SwiperSlide className="swiper-logo__slide" key={`logo${index}`}>{logoBrand}</SwiperSlide>
         ))}
       </Swiper>
-    </>
+    </div>
   );
 };
 

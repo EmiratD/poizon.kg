@@ -1,8 +1,8 @@
 .wrapper{
   max-width: 1440px;
-  margin: 50px auto;
+  margin: 0 auto 50px;
   padding: 0 50px;
-  @include flex-box(start, start, column, 70px)
+  @include flex-box(start, start, column, 50px)
 }
 
 .m0auto{
