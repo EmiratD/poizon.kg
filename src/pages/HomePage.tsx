@@ -2,11 +2,8 @@ import SliderInfoBord from "../components/sliderInfoBord/SliderInfoBord";
 import HomePageCatalog from "../components/homePageCatalog/HomePageCatalog";
 import Workflow from "../components/workflow/Workflow";
 import SliderLogo from "../components/sliderLogo/SliderLogo";
-import { useSearchUserQuery } from "../store/api/github.api";
 
 const HomePage = () => {
-
-  
   return (
     <main className="wrapper">
       <SliderInfoBord />

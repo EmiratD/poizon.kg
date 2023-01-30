@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 
-import { useSearchUserQuery } from "../../store/api/github.api";
+import { useSearchUserQuery } from "../../store/slice/github.api";
 
 import ItemCard from "../itemCard/ItemCard";
 import { SearchSvg } from "../../assets/svg/workflowSvg";
@@ -9,36 +9,47 @@ const Catalog = () => {
   const [catalog, setCatalog] = useState("man");
 
   const { isLoading, isError, data } = useSearchUserQuery(catalog);
-  
-  useEffect(() => {
 
-  }, [data])
+  useEffect(() => {}, [data]);
 
   return (
     <section className="catalog">
       <div className="catalog-fillter">
         <div>
-        <button autoFocus onClick={() => {setCatalog('man');
-        }} className="catalog-fillter__btn">
-          мужское
-        </button>
-        <button onClick={() => {setCatalog('woman');
-        }} className="catalog-fillter__btn">
-          женское
-        </button>
-        <button onClick={() => {setCatalog('new');
-        }} className="catalog-fillter__btn">
-          новинки
-        </button>
+          <button
+            autoFocus
+            onClick={() => {
+              setCatalog("man");
+            }}
+            className="catalog-fillter__btn"
+          >
+            мужское
+          </button>
+          <button
+            onClick={() => {
+              setCatalog("woman");
+            }}
+            className="catalog-fillter__btn"
+          >
+            женское
+          </button>
+          <button
+            onClick={() => {
+              setCatalog("new");
+            }}
+            className="catalog-fillter__btn"
+          >
+            новинки
+          </button>
         </div>
         <label htmlFor="searchCatalog">
-          <div className="w16h16" style={{height: 16,width: 16,}}>
-            <SearchSvg/>
+          <div className="w16h16" style={{ height: 16, width: 16 }}>
+            <SearchSvg />
           </div>
-          <input 
-            type="text" 
-            placeholder="поиск"  
-            id="searchCatalog" 
+          <input
+            type="text"
+            placeholder="поиск"
+            id="searchCatalog"
             onChange={(e) => {
               setCatalog(e.target.value);
             }}
@@ -46,16 +57,31 @@ const Catalog = () => {
         </label>
       </div>
       <div className="catalog-bord">
-        {isLoading && < div className="bord"><span className="bord-info-title">Loading</span></div>}
-        {isError && < div className="bord"><span className="bord-info-title">error</span></div>}
-        {data && data?.map(el => <ItemCard key={el.id} name={el.login} price={el.id} imge={el.avatar_url}/>)}
+        {isLoading && (
+          <div className="bord">
+            <span className="bord-info-title">Loading</span>
+          </div>
+        )}
+        {isError && (
+          <div className="bord">
+            <span className="bord-info-title">error</span>
+          </div>
+        )}
+        {data &&
+          data?.map((el) => (
+            <ItemCard
+              key={el.id}
+              name={el.login}
+              price={el.id}
+              imge={el.avatar_url}
+            />
+          ))}
       </div>
     </section>
-  )
+  );
 };
 
 export default Catalog;
-
 
 // const item = {
 //   name: "nikenikenikenikenikenikenikenikenikenikenikenikenikenikenikenikenikenikenikenikenikenikenikenikenikenikenikenikenikenikenikenike",

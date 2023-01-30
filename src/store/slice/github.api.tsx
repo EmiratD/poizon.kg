@@ -17,6 +17,6 @@ export const githubApi =  createApi({
       transformResponse: (response: IServerResponse<IUser>) => response.items
     })
   })
-})
+});
 
 export const {useSearchUserQuery} = githubApi;
