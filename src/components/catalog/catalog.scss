@@ -1,0 +1,72 @@
+.catalog {
+  width: 80vw;
+  height: auto;
+  margin: 0 auto;
+
+  &-action {
+    max-width: 1200px;
+    height: auto;
+    padding-bottom: 20px;
+    border-bottom: 2px solid $border-color-two;
+    @include flex-box(space-between, center, row, 15px);
+
+    &__btn {
+      padding: 5px 10px;
+      background: $back-color-one;
+      @include font-style(400, 22px);
+      color: $text-color-two;
+      border: 1px solid $border-color-one;
+      border-right: 1px solid $border-color-two;
+
+      &:hover {
+        border: 1px solid $border-color-two;
+      }
+
+      &:focus,
+      &:active {
+        background: $back-color-two;
+        color: $text-color-one;
+      }
+    }
+
+    &__label {
+      max-width: 200px;
+      height: 34px;
+      border: 1px solid $border-color-two;
+      border-radius: 5px;
+      padding: 0px 5px;
+      @include flex-box(space-between, center, row, 15px);
+
+      &-search {
+        width: 80%;
+        height: auto;
+        @include font-style();
+        color: $text-color-two;
+      }
+    }
+  }
+
+  .catalog-conteiner {
+    width: 100%;
+    @include flex-box(start, start, row, 0);
+    &__fillter{
+      min-width: 200px;
+      height: 100vh;
+      padding: 10px;
+    }
+    .y-line{
+      border-left: 1px solid $border-color-two;
+    }
+    &__bord {
+      max-width: 1100px;
+      height: auto;
+      @include flex-box(center, start, row, 30px, wrap);
+      padding: 20px 0 0 10px;
+      margin: 0 auto;
+    }
+  }
+}
+
+.text{
+  font-size: 44px;
+}

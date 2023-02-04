@@ -3,7 +3,7 @@ import Catalog from "../components/catalog/Catalog";
 const CatalogPage = () => {
   return (
     <main className="wrapper">
-      <Catalog />
+      <Catalog searchOn={true} fillterOn={true}/>
     </main>
   );
 };

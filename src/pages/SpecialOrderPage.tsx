@@ -1,10 +1,9 @@
 import React from 'react';
+import UserRoom from '../components/userRoom/UserRoom';
 
 function SpecialOrderPage() {
   return (
-    <div>
-      Order
-    </div>
+    <UserRoom/>
   );
 }
 

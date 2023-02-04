@@ -15,7 +15,7 @@
   }
 
   &-img {
-    width: 178px;
+    width: 180px;
     height: 198px;
     overflow: hidden;
     img {
@@ -31,14 +31,16 @@
 
     &__name {
       max-width: 120px;
-      overflow: hidden;
+      height: 20px;
       margin-bottom: 15px;
       @include font-style(400, 16px);
+      overflow: hidden;
       text-overflow: ellipsis;
     }
 
     &__price {
       max-width: 100px;
+      height: 20px;
       @include font-style(400, 20px);
       overflow: hidden;
       text-overflow: ellipsis;
@@ -60,12 +62,53 @@
     &:hover {
       transform: scale(1.1);
     }
+    .basket {
+      &:hover {
+        fill: rgb(66, 76, 165);
+        }
+    }
+  }
+
+  @media screen and (max-width: 1200px) {
+    width: 150px;
+    height: auto;
+    gap: 5px;
+    &-img {
+      width: 150px;
+      height: 170px;
+    }
+  
+    &-info {
+      width: 120px;
+      height: 90px;
+  
+      &__name {
+        height: 16px;
+      }
+    }
+  }
+  @media screen and (max-width: 610px) {
+    min-width: 300px;
+    height: 120px;
+    flex-direction: row;
+    &-img {
+      width: 120px;
+      height: auto;
+    }
+    &-info {
+      width: 160px;
+      height: auto;
+      padding: 15px;
+  
+      &__name {
+        max-width: 150px;
+        height: 18px;
+        margin-bottom: 50px;
+        @include font-style(400, 18px);
+      }
+  
+    }
   }
 }
 
 
-.basket {
-  &:hover {
-    fill: rgb(66, 76, 165);
-    }
-}

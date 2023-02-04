@@ -19,7 +19,7 @@ const SliderInfoBord = () => {
       <Swiper
         className="swiper-infobord"
         slidesPerView={1}
-        spaceBetween={50}
+        spaceBetween={500}
         autoplay={{
           delay: 7000,
           disableOnInteraction: false,

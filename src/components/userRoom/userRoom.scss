@@ -1,0 +1,180 @@
+.user-room {
+
+  gap: 0;
+
+  .user-info {
+    width: 100%;
+    height: 68px;
+    @include flex-box(space-between, end, row, 20px);
+    padding-bottom: 15px;
+    border-bottom: 2px solid $border-color-two;
+    &__name {
+      width: 240px;
+      height: 48px;
+      @include font-style(700, 44px);
+      color: text-color-two;
+    }
+
+    &__text {
+      width: 120px;
+      height: 24px;
+      @include font-style(400, 16px);
+      color: text-color-two;
+    }
+
+    &__setting {
+      min-width: 24px;
+      min-height: 24px;
+      transition: 0.8s;
+      svg{
+        width: 100%;
+        height: 100%;
+      }
+      &:hover {
+        transform:  scale(1.2);
+      }
+      &:focus {
+        transform:  rotate(0.3turn) scale(1.2);
+      }
+    }
+  }
+
+  .user-data {
+    width: 100%;
+    @include flex-box(start, start, row, 0px);
+    @media screen and (max-width: 800px) {
+      flex-direction: column;
+    }
+    &__btns {
+      width: auto;
+      height: auto;
+      position: sticky;
+      top: 55px;
+      left: 0;
+      background: $back-color-one;
+      z-index: 5;
+      @include flex-box(start, start, column, 10px);
+      @media screen and (max-width: 800px) {
+        width: 100%;
+        flex-direction: row;
+        justify-content: space-between;
+        gap: 0;
+      }
+      &-btn {
+        width: 210px;
+        height: 44px;
+        border-bottom: 2px solid $border-color-two;
+        padding: 4px 10px;
+        @include flex-box(start, center, row, 10px);
+        flex-basis: 100%;
+        .user-data-text {
+          @include font-style(400, 24px);
+          color: $text-color-two;
+          @media screen and (max-width: 800px) {
+            font-size: 16px;
+            justify-content: center;
+          }
+        }
+
+        .user-data-svg {
+          width: 24px;
+          height: 24px;
+          svg{
+            width: 100%;
+            height: 100%;
+          }
+          @media screen and (max-width: 800px) {
+            width: 18px;
+            height: 18px;
+          }
+        }
+
+        &:hover{
+          border: 2px solid $border-color-two;
+        }
+        &:focus{
+          border: 2px solid $border-color-two;
+          background: $back-color-two;
+          .user-data-text {
+            color: $text-color-one;
+          }
+          .user-data-svg {
+            svg path{
+              stroke: $border-color-one;
+            }
+          }
+        }
+      }
+    }
+
+    &__bord {
+      width: 100%;
+      min-height: 400px;
+      max-height: auto;
+      @include flex-box(center, start, row, 30px, wrap);
+      border-left: 2px solid $border-color-two;
+      background: $back-color-one;
+      padding: 20px;
+      margin: 0 auto;
+      @media screen and (max-width: 1200px) {
+        gap: 20px;
+      }
+      @media screen and (max-width: 800px) {
+        border-left: none;
+        padding: 10px;
+        gap: 10px;
+      }
+    }
+  }
+
+  .flexColumn{
+    flex-direction: column;
+    justify-content: start;
+  }
+  .flexCenter{
+    align-items: center;
+  }
+}
+
+.order-card{
+  width: 100%;
+  height: 40px;
+  padding: 10px 20px 5px;
+  border-radius: 5px;
+  background: $back-color-card;
+  transition: 0.3s;
+  overflow: hidden;
+  box-shadow: 0px -1px 4px rgba(0, 0, 0, 0.25);
+  @include flex-box(space-between, center, row, 10px);
+  &__text{
+    width: 100px;
+    height: 16px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    @include font-style(400, 16px);
+    line-height: 14px;
+  }
+  &__btn{
+    width: 24px;
+    height: 24px;
+  }
+
+  &:hover {
+    transform: scale(1.01);
+    box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.5);
+  }
+}
+
+.loader {
+  border: 10px solid $border-color-three;
+  border-top: 10px solid $border-color-two;
+  border-radius: 50%;
+  width: 120px;
+  height: 120px;
+  animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
