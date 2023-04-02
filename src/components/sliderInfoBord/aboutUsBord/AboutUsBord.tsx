@@ -1,7 +1,8 @@
 import { Link } from "react-router-dom";
 
-import PoizonLogobalck from "../../assets/svg/PoizonLogobalck";
-import Clothing from "../../assets/svg/Clothing";
+import PoizonLogobalck from "../../../assets/svg/PoizonLogobalck";
+import {ReactComponent as Clothing} from "../../../assets/svg/Clothing.svg";
+
 
 const AboutUsBord = () => {
   return (
@@ -18,9 +19,7 @@ const AboutUsBord = () => {
           <button className="bord-info-card__btn">о нас</button>
         </Link>
       </div>
-      <div className="bord-info-img">
-        <Clothing />
-      </div>
+      <div className="bord-info-img"><Clothing/></div>
     </section>
   );
 };

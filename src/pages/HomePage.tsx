@@ -7,7 +7,7 @@ const HomePage = () => {
   return (
     <main className="wrapper">
       <SliderInfoBord />
-      <Catalog searchOn={false} fillterOn={false}/>
+      <Catalog />
       <SliderLogo />
       <Workflow />
     </main>

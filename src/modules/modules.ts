@@ -25,3 +25,11 @@ export interface IServerResponse<T> {
   incomplete_results: boolean;
   items: T[];
 }
+
+export interface IorderItem{
+  id: number,
+  nameItem: string,
+  url: string,
+  quantity: string,
+  size: string,
+}

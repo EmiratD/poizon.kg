@@ -1,8 +1,10 @@
 import { configureStore } from "@reduxjs/toolkit";
 import { githubApi } from "./slice/github.api";
+import  orderList  from "./slice/orderSlice";
 
 const store = configureStore({
   reducer: {
+    orderList,
     [githubApi.reducerPath]: githubApi.reducer,
   },
   middleware: (getDefaultMiddleware) =>
@@ -11,3 +13,6 @@ const store = configureStore({
 });
 
 export default store;
+
+export type RootState = ReturnType<typeof store.getState>;
+export type AppDispatch = typeof store.dispatch;

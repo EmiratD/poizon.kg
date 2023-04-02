@@ -1,10 +1,11 @@
+import { FC } from "react";
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
 // import required modules
 import { Autoplay, Pagination } from "swiper";
 
-import AboutUsBord from "../aboutUsBord/AboutUsBord";
-import SpecialOrderlBord from "../specialOrderlBord/SpecialOrderlBord";
+import AboutUsBord from "./aboutUsBord/AboutUsBord";
+import SpecialOrderlBord from "./specialOrderlBord/SpecialOrderlBord";
 import SignInAndLogIn from "../signInAndLogIn/SignInAndLogIn";
 
 import "swiper/scss/pagination";
@@ -13,7 +14,7 @@ import "swiper/scss/pagination";
 import "swiper/css";
 import "swiper/css/pagination";
 
-const SliderInfoBord = () => {
+const SliderInfoBord:FC = () => {
   return (
     <div className="bord">
       <Swiper

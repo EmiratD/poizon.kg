@@ -1,17 +1,13 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, FC } from "react";
 
 import { useSearchUserQuery } from "../../store/slice/github.api";
 
 import ItemCard from "../itemCard/ItemCard";
 import { SearchSvg } from "../../assets/svg/workflowSvg";
-import FillterBord from "../fillterBord/FillterBord";
+// import FillterBord from "../fillterBord/FillterBord";
 
-interface Iprops {
-  searchOn: boolean;
-  fillterOn: boolean;
-}
 
-const Catalog = ({ searchOn, fillterOn }: Iprops) => {
+const Catalog: FC = () => {
   const [catalog, setCatalog] = useState("man");
 
   const { isLoading, isError, data } = useSearchUserQuery(catalog);
@@ -20,7 +16,6 @@ const Catalog = ({ searchOn, fillterOn }: Iprops) => {
     
   }, [data]);
 
-  const yLine = fillterOn ? "y-line" : "";
 
   return (
     <section className="catalog">
@@ -52,7 +47,6 @@ const Catalog = ({ searchOn, fillterOn }: Iprops) => {
             новинки
           </button>
         </div>
-        {searchOn && (
           <label className="catalog-action__label">
             <input
               type="text"
@@ -74,11 +68,10 @@ const Catalog = ({ searchOn, fillterOn }: Iprops) => {
               <SearchSvg />
             </div>
           </label>
-        )}
       </div>
       <div className="catalog-conteiner">
-        {fillterOn && <FillterBord />}
-        <div className={`catalog-conteiner__bord ${yLine}`}>
+        {/* {fillterOn && <FillterBord />} */}
+        <div className="catalog-conteiner__bord">
           {isLoading && (
             <div className="bord">
               <span className="bord-info-title">Loading</span>

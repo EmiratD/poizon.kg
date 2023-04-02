@@ -1,10 +1,8 @@
-import React from 'react';
+import UserRoom from '../components/userRoom/UserRoom';
 
 const UserRoomPage = () => {
   return (
-    <div>
-      
-    </div>
+    <UserRoom/>
   );
 };
 

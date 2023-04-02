@@ -1,10 +1,12 @@
+import {FC} from 'react';
+
 import {Link} from 'react-router-dom';
 
 import SignInAndLogIn from '../signInAndLogIn/SignInAndLogIn';
 
-import PoizonLogoWhite from '../../assets/svg/PoizonLogoWhite';
+import {ReactComponent as PoizonLogoWhite} from '../../assets/svg/PoizonLogoWhite.svg';
 
-const Header = () => {
+const Header: FC = () => {
   return(
     <header className="header">
       <nav className="header-nav">

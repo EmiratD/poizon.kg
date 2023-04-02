@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 
 import ItemCard from "../itemCard/ItemCard";
 import { useSearchUserQuery } from "../../store/slice/github.api";
+import Loader from "../loader/Loader";
 
 interface Iprops {
   searchOn: boolean;
@@ -140,7 +141,8 @@ const UserRoom = () => {
             </div>
             <span className="user-data-text">заказы</span>
           </button>
-          <button className="user-data__btns-btn">
+          <button 
+          className="user-data__btns-btn">
             <div className="user-data-svg">
               <svg
                 width="25"
@@ -189,7 +191,7 @@ const UserRoom = () => {
               />
             ))}
 
-          {isLoading && <div className="loader"></div>}
+          {isLoading && <Loader/>}
         </div>
       </div>
     </main>

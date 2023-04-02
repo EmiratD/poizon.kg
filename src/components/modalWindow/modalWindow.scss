@@ -1,0 +1,24 @@
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(222, 222, 222);
+}
+
+.modal.open {
+  display: flex;
+}
+
+.modal-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.close-button {
+  margin-top: 10px;
+}

@@ -1,9 +1,10 @@
-import React from 'react';
-import UserRoom from '../components/userRoom/UserRoom';
+import SpecialOrderlBord from "../components/specialOrder/SpecialOrder";
 
 function SpecialOrderPage() {
   return (
-    <UserRoom/>
+    <>
+      <SpecialOrderlBord />
+    </>
   );
 }
 

@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 
-import NoItem from "../../assets/svg/NoItem";
+import NoItem from "../../../assets/svg/NoItem";
 
 const SpecialOrderlBord = () => {
   return (

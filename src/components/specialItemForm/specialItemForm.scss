@@ -1,0 +1,111 @@
+.special-form {
+  width: 651px;
+  height: auto;
+  @include flex-box(start, start, column, 15px);
+  padding: 10px 15px;
+  background: $back-color-one;
+  border: $border-color-two 1px solid;
+  border-radius: 5px;
+
+  &__open{
+    animation-name: scale-up-top;
+    animation-duration: 0.6s;
+  }
+  &__close{
+    animation-name: scale-out-center;
+    animation-duration: 0.6s;
+  }
+
+  &__label {
+    width: 100%;
+    height: 30px;
+    @include flex-box(start, center);
+    @include font-style(400, 16px, row, bold);
+
+    animation-name: scale-up-top;
+    animation-duration: 0.6s;
+  
+
+    &-text{
+      width: 180px;
+    }
+  }
+
+  &__input {
+    width: 100%;
+    height: 28px;
+    border: 1px solid $border-color-two;
+    border-radius: 5px;
+    background: #f1f1f1;
+    padding-left: 10px;
+    margin-left: 10px;
+    @include font-style(400, 16px);
+    color: $text-color-two;
+    &::placeholder{
+      color: $text-color-three;
+    }
+  }
+
+
+  .conteiner-row{
+    width: 100%;
+    @include flex-box(space-between, center, row);
+  }
+
+}
+.btn-add{
+  padding: 5px 10px;
+  border: 1px solid $border-color-two;
+  background: $btn-color-two;
+  @include font-style(400, 16px);
+  color: $text-color-one;
+  align-self: flex-end;
+  border-radius: 5px;
+  transition: 0.2s;
+
+  animation-name: appear;
+  animation-duration: 0.7s;
+
+  &:hover{
+    background: $btn-hover-one;
+    color: $text-color-two;
+  }
+}
+
+
+@keyframes scale-up-top {
+  0% {
+    -webkit-transform: scale(0.5);
+            transform: scale(0.5);
+    -webkit-transform-origin: 50% 0%;
+            transform-origin: 50% 0%;
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    -webkit-transform-origin: 50% 0%;
+            transform-origin: 50% 0%;
+  }
+}
+
+@keyframes appear {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 100;
+  }
+}
+
+@keyframes scale-out-center {
+  0% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+    opacity: 1;
+  }
+}
